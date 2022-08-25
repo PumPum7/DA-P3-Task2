@@ -59,7 +59,7 @@ export default function NftDisplay() {
 					<tbody>
 					{ /* @ts-ignore */}
 					{nft.json.attributes.map(attribute => (
-						<tr>
+						<tr key={attribute.trait_type}>
 							<td>{attribute.trait_type}</td>
 							<td>{attribute.value}</td>
 						</tr>
