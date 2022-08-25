@@ -39,3 +39,34 @@ td, th {
     border: 1px solid white;
   }
 }
+
+
+input[type=text]{
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem 2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
+  border-radius: 2rem;
+}
+
+button {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'DM Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 24px;
+  border-radius: 4px;
+  background-color: #512da8;
+}

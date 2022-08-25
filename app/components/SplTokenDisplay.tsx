@@ -45,13 +45,14 @@ export const SplTokenDisplay = ({walletAddress}: { walletAddress: string }) => {
 				{spltokens.map(
 					token => {
 						if (token)
-							return <tr>
+							// @ts-ignore
+							return <tr key={token.info.mint}>
 								{ /* @ts-ignore */}
 								<td>{token.info.mint}</td>
 								{ /* @ts-ignore */}
 								<td>{token.info.tokenAmount.decimals}</td>
 							</tr>
-						return <tr>
+						return <tr key="nothing">
 							<td>Nothing</td>
 						</tr>
 					}
