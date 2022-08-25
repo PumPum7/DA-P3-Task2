@@ -27,8 +27,12 @@ export default function NftDisplay() {
 	const [nft, setNft] = useState<any>(null);
 	const fetchNft = async () => {
 		const mintAddress = new PublicKey(address)
-		const nft = await metaplex.nfts().findByMint({mintAddress}).run();
-		setNft(nft);
+		try {
+			const nft = await metaplex.nfts().findByMint({mintAddress}).run();
+			setNft(nft);
+		} catch {
+			toast.error("Please make sure that the mint address is valid.");
+		}
 	};
 
 	return (
